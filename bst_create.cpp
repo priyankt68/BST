@@ -28,7 +28,7 @@ struct node* root = newnode(10);
        root->left = newnode(11);
        root->right = newnode(12);
        root->left->left = newnode(13);
-		root->left->->left->left = newnode(14);
+		root->left->left->left = newnode(14);
 
 
 return 0;
