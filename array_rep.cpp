@@ -33,6 +33,11 @@ int main(int argc, char const *argv[])
 
 	cout << "Enter the array elements" << endl;
 
+
+	for(int i=0;i<n;i++)
+	{
+		 array[i]=0;
+	}
 	for(int i=0;i<n;i++)
 	{
 		cin >> array[i];
@@ -44,7 +49,7 @@ int main(int argc, char const *argv[])
 	//int t = (n == n2) ? (n2 >> 1) : n2;
 
 	cout << "Corresponding Binary Tree representation is as follows" << endl;
-
+/*We traverse the tree breadth wise, level by level . Height of the tree indicates the number of levels to traverse*/
 	for(int i=0;i<h;t = t >> 1,++i)   // n-1 as in a tree with n nodes, there are n-1 internal nodes
 	{
 		cout << "Children of "<< array[(i)] << "are" << "Left:"<<array[left(i)] << "and" << "right" << array[right(i)] << endl;// left child
