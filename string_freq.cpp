@@ -33,20 +33,16 @@ int main(int argc, char const *argv[])
 	
 	cin >> s;
 
-	cout << "Input strinf is " << s;
-	cout << "Input strinf is " << s;
-	cout << "Input strinf is " << s[2];
-
 	int length = StringLength(s);
 
 	cout << length;
-	/*for(int i=0;s[i]!='\0';)
+	for(int i=0;s[i]!='\0';)
 	{
 		if (s[i]!='\0') i++
 			for (int j=i+1;s[j])
 	}
-	*/
-	
+
+		
 
 
 
