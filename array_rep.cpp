@@ -14,6 +14,7 @@ using namespace std;
 #define right(i)  ((i << 1) +2)
 #define parent(i) ((i - 1) >> 1)
 #define floor_to_power_of_2(x) (1 << ((int) floor(log2(x))))
+#define power_of_2(x) pow(2,x)
 
 int main(int argc, char const *argv[])
 {
@@ -26,11 +27,40 @@ int main(int argc, char const *argv[])
 
     /* Number of leaves in the "fringe" (last level) of the tree. */
 
-    for(int i=1;i<=10;i++)
+	int sum=0;
+	int fringe;
+
+	int h=ceiling(log2(n)); // height of the tre
+    for(int i=0;i<h;i++)  // traverse the number of tree levels
     {
+    	if( sum < n)   // break condition where the summation of number of elements exceeds the
+						// number of elements in the array.
+    	{
+    		sum = sum + pow(2,i);
+    		cout << "\n sum : " << sum;
+    	}
+
+    	else
+    	{
+    		fringe = n - sum ;
+    	}
+
+
+    		
+
+	
+}
+	//fringee = n - sum;
+	//cout << "fringe_size is for " << n << "is " << fringee << endl;
+
+
+
+	for(int i=1;i<=10;i++)
+	{ 
     int lowest_power_2 = floor_to_power_of_2(i);
     int fringe = (i == lowest_power_2) ? i : ((i - lowest_power_2) << 1);
     cout << "n = " << i << "| lowest_power_2 = " << lowest_power_2 << " | fringe = " << fringe << endl ;
+
 	}	
     //cout << "\n Number of leaves in the fringe " << fringe;
 
@@ -53,7 +83,7 @@ int main(int argc, char const *argv[])
 
 	cout << "Height of the Binary Tree is: " << ceiling(log2(n));
 
-	int h=ceiling(log2(n));
+
 	//int t = (n == n2) ? (n2 >> 1) : n2;
 
 	cout << "Corresponding Binary Tree representation is as follows" << endl;
