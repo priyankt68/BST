@@ -1,6 +1,5 @@
 /*In-place array representation of Binary Search Tree
 
-
 NOTE: Array indexing beginning with "0" and not "1"
 
 */
@@ -28,7 +27,7 @@ int main(int argc, char const *argv[])
     /* Number of leaves in the "fringe" (last level) of the tree. */
 
 	int sum=0;
-	int fringee=0;
+	int fringe=0;
 
 	int h=ceiling(log2(n)); // height of the tre
 
@@ -44,23 +43,26 @@ int main(int argc, char const *argv[])
   		cout << "\n sum =" << sum;
      	}
      }
-     fringee = n - sum;
+     fringe = n - sum;
 
-     cout << "The fringe size is : " << fringee << endl ;
+     cout << "The fringe size is : " << fringe << endl ;
 
 /*Number of elements in the just upper layer of the tree, i.e just above the fringe level*/
 
-     cout << "Elements just above the fringe level" << pow(2,i) - fringee << endl;
+     int above_fringe = pow(2,i) - fringe ;
+
+
+     cout << "Elements just above the fringe level" << pow(2,i) - fringe << endl;
 
 
 	for(int i=1;i<=10;i++)
 	{ 
     int lowest_power_2 = floor_to_power_of_2(i);
     int fringe = (i == lowest_power_2) ? i : ((i - lowest_power_2) << 1);
-    cout << "n = " << i << "| lowest_power_2 = " << lowest_power_2 << " | fringe = " << fringe << endl ;
+    cout << "\n n = " << i << "| lowest_power_2 = " << lowest_power_2 << " | fringe = " << fringe << endl ;
 
 	}	
-    //cout << "\n Number of leaves in the fringe " << fringe;
+    
 
     /* Left half of a full fringe */
     int t = (n == n2) ? (n2 >> 1) : n2;
@@ -79,7 +81,7 @@ int main(int argc, char const *argv[])
 		cin >> array[i];
 	}
 
-	cout << "Height of the Binary Tree is: " << ceiling(log2(n));
+	cout << "\n Height of the Binary Tree is: " << ceiling(log2(n));
 
 
 	//int t = (n == n2) ? (n2 >> 1) : n2;
@@ -93,5 +95,7 @@ int main(int argc, char const *argv[])
 	{
 		cout << "Children of "<< array[(i)] << "are" << "Left:"<<array[left(i)] << "and" << "right" << array[right(i)] << endl;// left child
 	}
+
+
 
 }
