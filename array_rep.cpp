@@ -28,29 +28,29 @@ int main(int argc, char const *argv[])
     /* Number of leaves in the "fringe" (last level) of the tree. */
 
 	int sum=0;
-	int fringe;
+	int fringee=0;
 
 	int h=ceiling(log2(n)); // height of the tre
 
 /*Calculating the fringe size or the number of elements in the tree*/
-
-    for(int i=0;i<h;i++)  // traverse the number of tree levels
+	int i;
+//int h=ceiling(log2(n)); // height of the tre
+    for( i=0;i<h-1;i++) // traverse the number of tree levels
     {
-    	if( sum < n)   // break condition where the summation of number of elements exceeds the
-						// number of elements in the array.
-    	{
-    		sum = sum + pow(2,i);
-    		cout << "\n sum : " << sum;
-    	}
+     if( sum < n) // break condition where the summation of number of elements exceeds the
+					// number of elements in the array.
+     	{
+     	sum = sum + pow(2,i);
+  		cout << "\n sum =" << sum;
+     	}
+     }
+     fringee = n - sum;
 
-    	else
-    	{
-    		fringe = n - sum ;
-    		
-    	}
-	}
+     cout << "The fringe size is : " << fringee << endl ;
 
+/*Number of elements in the just upper layer of the tree, i.e just above the fringe level*/
 
+     cout << "Elements just above the fringe level" << pow(2,i) - fringee << endl;
 
 
 	for(int i=1;i<=10;i++)
