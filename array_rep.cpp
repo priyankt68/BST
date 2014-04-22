@@ -31,6 +31,9 @@ int main(int argc, char const *argv[])
 	int fringe;
 
 	int h=ceiling(log2(n)); // height of the tre
+
+/*Calculating the fringe size or the number of elements in the tree*/
+
     for(int i=0;i<h;i++)  // traverse the number of tree levels
     {
     	if( sum < n)   // break condition where the summation of number of elements exceeds the
@@ -43,15 +46,10 @@ int main(int argc, char const *argv[])
     	else
     	{
     		fringe = n - sum ;
-    	}
-
-
     		
+    	}
+	}
 
-	
-}
-	//fringee = n - sum;
-	//cout << "fringe_size is for " << n << "is " << fringee << endl;
 
 
 
