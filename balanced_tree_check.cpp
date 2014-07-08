@@ -157,7 +157,7 @@ bool isBalanced(struct node *root, int* height)
    given data and NULL left and right pointers. */
 struct node* newNode(int data)
 {
-    struct node* node = (struct node*)malloc(sizeof(struct node));
+    struct node* node = new node;
     node->data = data;
     node->left = NULL;
     node->right = NULL;
